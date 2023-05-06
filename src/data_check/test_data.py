@@ -75,7 +75,4 @@ def test_price_range(data, min_price, max_price):
      checks that the price range is between min_price
      and max_price
     """
-    assert data['price'].dropna().between(min_price, max_price).all(), (
-            f"Column {'price'} failed the test. Should be between {min_price} and {max_price}, "
-            f"instead min={data['price'].min()} and max={data['price'].max()}"
-        )
+    assert data['price'].dropna().between(min_price, max_price).all()
